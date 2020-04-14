@@ -3,7 +3,9 @@ version: '3'
 services:
   mysql:
     image: mysql:5.7
+    command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
     environment:
+      LANG: C.UTF-8 
       TZ: Asia/Tokyo
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: dev
