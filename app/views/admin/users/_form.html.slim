@@ -4,5 +4,14 @@
     = f.text_field :name, class: 'form-control', id: 'user_name'
   .form-group
     = f.label :email
-    = f.text_field :description, rows: 5, class: 'form-control', id: 'user_email'
-  = f.submit nil, class: 'btn btn-primary'
+    = f.text_field :email, class: 'form-control', id: 'user_email'
+  .form-group
+    = f.label :password
+    = f.password_field :password, class: 'form-control', id: 'user_password'
+  .form-group
+    = f.label :password_confirmation
+    = f.password_field :password_confirmation, class: 'form-control', id: 'user_password_confirmation'
+  .form-check
+    = f.check_box :admin, class: 'form-check-input', id: 'user_admin'
+    = f.label :admin, class: 'form-check-label'
+  = f.submit nil, class: 'btn btn-primary margin-top-middle'
